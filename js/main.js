@@ -27,13 +27,18 @@ function splitWords(el) {
 const header = document.getElementById('siteHeader');
 const heroBanner = document.getElementById('heroBanner');
 if (header && heroBanner) {
-  ScrollTrigger.create({
-    trigger: heroBanner,
-    start: 'bottom top+=10',
-    end: 'max',
-    onEnter:     () => header.setAttribute('data-state', 'solid'),
-    onLeaveBack: () => header.setAttribute('data-state', 'transparent')
-  });
+  let currentState = 'transparent';
+  const updateHeaderState = () => {
+    const threshold = heroBanner.offsetHeight - 10;
+    const next = window.scrollY >= threshold ? 'solid' : 'transparent';
+    if (next !== currentState) {
+      currentState = next;
+      header.setAttribute('data-state', next);
+    }
+  };
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+  window.addEventListener('resize', updateHeaderState);
+  updateHeaderState();
 }
 
 /* ---------- Right edge accent cursor: follows scroll progress ---------- */
