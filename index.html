@@ -71,16 +71,9 @@
 <!-- HEADER: dual version (transparent over hero, solid post-scroll) -->
 <header class="site-header" id="siteHeader" data-state="transparent">
   <a href="#" class="logo" aria-label="SEID home">
-    <!-- Logo with two color variants controlled via CSS -->
-    <svg class="logo-svg" viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <text class="logo-text" x="0" y="32" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32" letter-spacing="-1">SEID</text>
-      <rect x="78" y="6" width="12" height="12" fill="#ed6d67"/>
-      <rect x="94" y="6" width="12" height="12" class="logo-sq-a"/>
-      <rect x="110" y="6" width="12" height="12" fill="#d4c4c0"/>
-      <rect x="78" y="22" width="12" height="12" class="logo-sq-a"/>
-      <rect x="94" y="22" width="12" height="12" fill="#ed6d67"/>
-      <rect x="110" y="22" width="12" height="12" class="logo-sq-b"/>
-    </svg>
+    <!-- Two logo variants: white (over hero) + dark (sticky); CSS toggles visibility -->
+    <img class="logo-img logo-img--light" src="https://www.figma.com/api/mcp/asset/4f3c7496-67d5-4b19-9269-64241e75f681" alt="SEID" />
+    <img class="logo-img logo-img--dark"  src="https://www.figma.com/api/mcp/asset/354a7c5e-7a76-423b-a008-0376b41d622c" alt="SEID" />
   </a>
 
   <nav class="nav" aria-label="Primary">
@@ -295,7 +288,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">Oil &amp; gas</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg width="42" height="42"><use href="#i-oil"/></svg>
+            <img src="https://www.figma.com/api/mcp/asset/875b0448-5a1e-48cd-a6db-103de59e4f93" alt="" width="48" height="48" />
           </div>
         </div>
         <div class="project-card__body">
@@ -309,7 +302,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">LNG</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg width="42" height="42"><use href="#i-lng"/></svg>
+            <img src="https://www.figma.com/api/mcp/asset/6bf5f892-26ca-4136-9a2b-aec8c0ed9237" alt="" width="48" height="48" />
           </div>
         </div>
         <div class="project-card__body">
@@ -323,7 +316,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">Offshore</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg width="42" height="42"><use href="#i-offshore"/></svg>
+            <img src="https://www.figma.com/api/mcp/asset/b83b9da1-cfc5-4ef8-9477-40b9ce76a3fa" alt="" width="48" height="48" />
           </div>
         </div>
         <div class="project-card__body">
@@ -421,15 +414,7 @@
   <div class="footer__top">
     <div class="footer__left">
       <a href="#" class="footer__logo" aria-label="SEID">
-        <svg viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="32" fill="#fafbfc" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32">SEID</text>
-          <rect x="78" y="6" width="12" height="12" fill="#ed6d67"/>
-          <rect x="94" y="6" width="12" height="12" fill="#fafbfc"/>
-          <rect x="110" y="6" width="12" height="12" fill="#d4c4c0"/>
-          <rect x="78" y="22" width="12" height="12" fill="#fafbfc"/>
-          <rect x="94" y="22" width="12" height="12" fill="#ed6d67"/>
-          <rect x="110" y="22" width="12" height="12" fill="#d5e1e9"/>
-        </svg>
+        <img src="https://www.figma.com/api/mcp/asset/4f3c7496-67d5-4b19-9269-64241e75f681" alt="SEID" />
       </a>
       <ul class="footer__contacts">
         <li><strong>Office:</strong><br />Via Sant'Alberto 1/F, 24020 Parre (BG) — ITALY</li>

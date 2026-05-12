@@ -91,9 +91,8 @@ button { font: inherit; cursor: pointer; border: 0; background: transparent; col
 .site-header[data-state="transparent"] {
   background: transparent;
 }
-.site-header[data-state="transparent"] .logo-text { fill: #fcfafa; }
-.site-header[data-state="transparent"] .logo-sq-a { fill: #fcfafa; }
-.site-header[data-state="transparent"] .logo-sq-b { fill: rgba(252,250,250,.5); }
+.site-header[data-state="transparent"] .logo-img--light { opacity: 1; }
+.site-header[data-state="transparent"] .logo-img--dark  { opacity: 0; }
 .site-header[data-state="transparent"] .nav a {
   background: rgba(255,255,255,.10);
   color: #fcfafa;
@@ -120,19 +119,24 @@ button { font: inherit; cursor: pointer; border: 0; background: transparent; col
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 22px -18px rgba(6, 12, 17, .25);
 }
-.site-header[data-state="solid"] .logo-text { fill: #1a5784; }
-.site-header[data-state="solid"] .logo-sq-a { fill: #1a5784; }
-.site-header[data-state="solid"] .logo-sq-b { fill: #d5e1e9; }
+.site-header[data-state="solid"] .logo-img--light { opacity: 0; }
+.site-header[data-state="solid"] .logo-img--dark  { opacity: 1; }
 
 .logo {
   flex-shrink: 0;
   width: 127px;
   height: 42px;
   display: block;
+  position: relative;
 }
-.logo svg, .logo-svg { width: 100%; height: 100%; display: block; }
-.logo-text, .logo-sq-a, .logo-sq-b {
-  transition: fill .4s ease;
+.logo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transition: opacity .4s ease;
 }
 
 .nav { flex: 1; }
@@ -744,7 +748,8 @@ section { position: relative; }
   background: var(--accent-500);
   transform: rotate(-3deg);
 }
-.project-card__icon svg { width: 42px; height: 42px; }
+.project-card__icon svg,
+.project-card__icon img { width: 48px; height: 48px; object-fit: contain; }
 
 .project-card__body { flex: 1; display: flex; flex-direction: column; gap: 16px; }
 .project-card__body h4 {
@@ -915,8 +920,9 @@ section { position: relative; }
   gap: 70px;
   padding: var(--spacing-2xl) 0;
 }
-.footer__logo { width: 127px; }
-.footer__logo svg { width: 100%; }
+.footer__logo { width: 127px; display: block; }
+.footer__logo svg,
+.footer__logo img { width: 100%; height: auto; display: block; }
 
 .footer__contacts {
   list-style: none;
