@@ -811,6 +811,7 @@ section { position: relative; }
 .data-card__icon {
   width: 90px; height: 90px;
   background: var(--primary-500);
+  color: var(--neutral-50);
   display: flex;
   align-items: center;
   justify-content: center;
