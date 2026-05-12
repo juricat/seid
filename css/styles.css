@@ -844,8 +844,6 @@ section { position: relative; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  will-change: transform;
-  transform: scale(1.08);
 }
 .careers__copy {
   flex: 0 0 672px;
