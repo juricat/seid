@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEID — Hi, Humanistic Intelligence</title>
+<meta name="description" content="Automazione di processo per impianti ad alta criticità. Control System Integrator e Main Automation Provider." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Accent vertical line on right edge -->
+<div class="edge-accent" aria-hidden="true">
+  <span class="edge-accent__inner"></span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <a href="#" class="logo" aria-label="SEID home">
+    <svg viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+      <text x="0" y="32" fill="#1a5784" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32" letter-spacing="-1">SEID</text>
+      <rect x="78" y="6" width="12" height="12" fill="#ed6d67"/>
+      <rect x="94" y="6" width="12" height="12" fill="#1a5784"/>
+      <rect x="110" y="6" width="12" height="12" fill="#d4c4c0"/>
+      <rect x="78" y="22" width="12" height="12" fill="#1a5784"/>
+      <rect x="94" y="22" width="12" height="12" fill="#ed6d67"/>
+      <rect x="110" y="22" width="12" height="12" fill="#d5e1e9"/>
+    </svg>
+  </a>
+
+  <nav class="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#about">about us</a></li>
+      <li><a href="#services">solution <span class="caret">↘</span></a></li>
+      <li><a href="#services">service <span class="caret">↘</span></a></li>
+      <li><a href="#projects">products <span class="caret">↘</span></a></li>
+      <li><a href="#projects">case study</a></li>
+      <li><a href="#careers">eventi</a></li>
+      <li><a href="#careers">careers</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <nav>
+    <a href="#about">about us</a>
+    <a href="#services">solution</a>
+    <a href="#services">service</a>
+    <a href="#projects">products</a>
+    <a href="#projects">case study</a>
+    <a href="#careers">eventi</a>
+    <a href="#careers">careers</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <h1 class="hero-banner__title">
+      <span class="hi js-hi">Hi,</span>
+      <span class="white js-hi-text">Humanistic intelligence</span>
+    </h1>
+    <div class="hero-banner__buttons js-fade-up">
+      <a class="btn btn--primary" href="#services">SOLUZIONI</a>
+      <a class="btn btn--secondary" href="#services">SERVICE</a>
+    </div>
+  </section>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <p class="hero-section__copy js-words">Automazione di processo per impianti ad alta criticità. Operiamo come Control System Integrator e Main Automation Provider per impianti complessi in tutto il mondo.</p>
+    <a class="btn btn--ghost js-fade-up" href="#careers">scopri il team</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title js-reveal">Chi siamo</h2>
+    <div class="about__row">
+      <div class="about__copy js-fade-up">
+        <p>Da oltre 40 anni integriamo tecnologia, sicurezza funzionale e competenze ingegneristiche per i settori Oil &amp; Gas, LNG, Offshore, Energy, Hydrogen e Chemical.</p>
+        <p>Progettiamo e realizziamo sistemi di automazione per industrie di processo dove continuità operativa, safety e performance non sono opzionali.</p>
+        <p>Ogni impianto che controlliamo gestisce energia, fluidi, gas o processi critici: per questo ogni dettaglio deve funzionare con precisione assoluta.</p>
+      </div>
+      <a class="btn btn--primary btn--icon js-fade-up" href="#services">
+        <span>servizi</span>
+        <span class="btn__icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ACCORDION / SERVICES -->
+  <section class="services" id="services">
+    <div class="services__image js-parallax">
+      <img src="https://www.figma.com/api/mcp/asset/ca672ca2-7e3f-4806-a216-b93a94ddacea" alt="Impianto industriale automazione SEID" loading="lazy" />
+    </div>
+
+    <div class="services__list">
+      <div class="accordion" data-accordion>
+
+        <article class="accordion__item is-open" data-item>
+          <header class="accordion__header" data-header>
+            <h3>OIL &amp; GAS</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Sistemi di automazione e controllo per impianti upstream, midstream e downstream. Sviluppiamo soluzioni affidabili per compressori, separatori, raffinerie e trattamento gas, garantendo continuità operativa, safety e performance in ambienti ad alta criticità.</p>
+            <div class="tags">
+              <span class="tag tag--accent">Unit Control Panel</span>
+              <span class="tag">Local Control Panel</span>
+              <span class="tag">Junction Box</span>
+              <span class="tag">Pushbutton Station</span>
+              <span class="tag">Local Instrument Board</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion__item" data-item>
+          <header class="accordion__header" data-header>
+            <h3>LNG</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Sistemi di controllo e safety per la liquefazione, lo stoccaggio e la rigassificazione del gas naturale. Progetti integrati per terminali LNG, gestione boil-off, monitoraggio criogenico.</p>
+            <div class="tags">
+              <span class="tag tag--accent">Cryogenic Skid</span>
+              <span class="tag">BOG Compressor Panel</span>
+              <span class="tag">ESD System</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion__item" data-item>
+          <header class="accordion__header" data-header>
+            <h3>Offshore</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Pannelli e sistemi di controllo certificati per ambienti offshore: FPSO, piattaforme fisse, jack-up. Soluzioni resistenti alla corrosione, certificate per zone ATEX/IECEx.</p>
+            <div class="tags">
+              <span class="tag tag--accent">FPSO Control</span>
+              <span class="tag">Hazardous Area</span>
+              <span class="tag">Subsea Interface</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion__item" data-item>
+          <header class="accordion__header" data-header>
+            <h3>Energy</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Controllo di centrali termoelettriche, cogenerazione, rinnovabili. Automazione di turbine, BOP e bilanci elettrici dell&apos;impianto con SIL fino a livello 3.</p>
+            <div class="tags">
+              <span class="tag tag--accent">Power Plant DCS</span>
+              <span class="tag">Turbine Control</span>
+              <span class="tag">BOP Integration</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion__item" data-item>
+          <header class="accordion__header" data-header>
+            <h3>Hydrogen</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Sistemi per la produzione, compressione e stoccaggio dell&apos;idrogeno verde e blu. Controllo di elettrolizzatori, gestione safety dedicata e integrazione con la rete elettrica.</p>
+            <div class="tags">
+              <span class="tag tag--accent">Electrolyzer Control</span>
+              <span class="tag">H₂ Safety</span>
+              <span class="tag">Storage Skid</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion__item" data-item>
+          <header class="accordion__header" data-header>
+            <h3>Chemical</h3>
+            <button class="accordion__toggle" aria-label="Apri sezione" data-toggle><span class="icon-plus"></span></button>
+          </header>
+          <div class="accordion__body" data-body>
+            <p>Automazione di processi chimici e petrolchimici: reattori, distillazione, polimerizzazione. Sistemi di safety SIL, batch control e gestione delle ricette per impianti continui e discontinui.</p>
+            <div class="tags">
+              <span class="tag tag--accent">Batch Control</span>
+              <span class="tag">SIS Architecture</span>
+              <span class="tag">Recipe Management</span>
+            </div>
+            <div class="accordion__cta">
+              <a class="btn btn--primary" href="#projects">esplora</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-wrap" id="projects">
+    <div class="projects-intro">
+      <h2 class="section-title js-reveal">I nostri progetti</h2>
+      <a class="btn btn--primary btn--icon js-fade-up" href="#projects">
+        <span>case study</span>
+        <span class="btn__icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card js-card">
+        <div class="project-card__top">
+          <h3 class="project-card__title">Oil &amp; gas</h3>
+          <div class="project-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 V14 L18 6 L30 14 V30 H22 V20 H14 V30 Z" fill="#fff"/></svg>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <h4>Pannelli di controllo per raffineria Mediterranea</h4>
+          <p>Engineering, fabbricazione e commissioning di un sistema integrato con oltre 240 I/O per il monitoraggio dei compressori principali.</p>
+        </div>
+        <a class="btn btn--primary btn--xs" href="#">approfondisci il case</a>
+      </article>
+
+      <article class="project-card js-card">
+        <div class="project-card__top">
+          <h3 class="project-card__title">LNG</h3>
+          <div class="project-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="20" r="10" fill="#fff"/><path d="M18 4 L24 16 H12 Z" fill="#fff"/></svg>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <h4>Terminale rigassificazione – sistemi safety SIL 3</h4>
+          <p>Architettura ridondata per il controllo criogenico, completa di simulazione FAT e supporto al commissioning in loco.</p>
+        </div>
+        <a class="btn btn--primary btn--xs" href="#">approfondisci il case</a>
+      </article>
+
+      <article class="project-card js-card">
+        <div class="project-card__top">
+          <h3 class="project-card__title">Offshore</h3>
+          <div class="project-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 H32 L28 30 H8 Z" fill="#fff"/><rect x="14" y="8" width="8" height="16" fill="#fff"/></svg>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <h4>Piattaforma FPSO – control system upgrade</h4>
+          <p>Migrazione di un DCS legacy verso architettura moderna multi-vendor con downtime minimo e zero incidenti.</p>
+        </div>
+        <a class="btn btn--primary btn--xs" href="#">approfondisci il case</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="performance">
+    <h2 class="section-title js-reveal">
+      Esperienza reale.<br />Performance misurabili.
+    </h2>
+  </section>
+
+  <!-- DATA CARDS -->
+  <section class="data-grid">
+    <article class="data-card js-card">
+      <div class="data-card__top">
+        <p class="data-card__number" data-counter data-target="40" data-suffix="+">
+          <span class="num">00</span><span class="suf">kw</span>
+        </p>
+        <div class="data-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M18 4 L8 22 H16 L14 32 L26 14 H18 Z" fill="#fff"/></svg>
+        </div>
+      </div>
+      <p class="data-card__copy">Anni di esperienza nell&apos;automazione industriale ad alta criticità.</p>
+    </article>
+
+    <article class="data-card js-card">
+      <div class="data-card__top">
+        <p class="data-card__number" data-counter data-target="500" data-suffix="+">
+          <span class="num">00</span><span class="suf">kw</span>
+        </p>
+        <div class="data-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="24" height="20" rx="2" fill="#fff"/><rect x="10" y="12" width="16" height="3" fill="#1a5784"/></svg>
+        </div>
+      </div>
+      <p class="data-card__copy">Progetti consegnati in oltre 30 paesi nel mondo.</p>
+    </article>
+
+    <article class="data-card js-card">
+      <div class="data-card__top">
+        <p class="data-card__number" data-counter data-target="99" data-suffix="%">
+          <span class="num">00</span><span class="suf">kw</span>
+        </p>
+        <div class="data-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M18 4 L30 10 V20 C30 26 24 32 18 32 C12 32 6 26 6 20 V10 Z" fill="#fff"/></svg>
+        </div>
+      </div>
+      <p class="data-card__copy">Uptime medio dei sistemi installati nei settori critici.</p>
+    </article>
+  </section>
+
+  <!-- CAREERS -->
+  <section class="careers" id="careers">
+    <div class="careers__image js-parallax">
+      <img src="https://www.figma.com/api/mcp/asset/4fd340e8-c42e-48a8-834a-2d0d92413b69" alt="Team SEID al lavoro" loading="lazy" />
+    </div>
+    <div class="careers__copy">
+      <h2 class="js-reveal">Lavora con noi</h2>
+      <p class="js-fade-up">Cerchiamo persone che vogliono costruire il futuro dell&apos;automazione industriale.</p>
+      <p class="js-fade-up">Entrare in SEID significa lavorare su progetti internazionali complessi, in un ambiente tecnico altamente specializzato dove innovazione, responsabilità e crescita professionale fanno parte della cultura aziendale.</p>
+      <p class="js-fade-up">Se ami la tecnologia ma credi anche nel valore umano dell&apos;ingegneria, SEID è il posto giusto per te.</p>
+      <a class="btn btn--ghost btn--icon js-fade-up" href="#contact">
+        <span>posizioni aperte</span>
+        <span class="btn__icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="contact-cta" id="contact">
+    <h2 class="js-reveal">Parliamo del tuo prossimo progetto</h2>
+    <p class="js-fade-up">Sviluppiamo internamente engineering, produzione, software, testing e commissioning, offrendo un approccio integrato e multi-vendor.</p>
+    <div class="contact-cta__buttons js-fade-up">
+      <a class="btn btn--primary btn--icon btn--sm" href="#">
+        <span>scrivici</span>
+        <span class="btn__icon" aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn--soft btn--icon btn--sm" href="#">
+        <span>Parla con noi</span>
+        <span class="btn__icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__left">
+      <a href="#" class="footer__logo" aria-label="SEID">
+        <svg viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="32" fill="#fafbfc" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32">SEID</text>
+          <rect x="78" y="6" width="12" height="12" fill="#ed6d67"/>
+          <rect x="94" y="6" width="12" height="12" fill="#fafbfc"/>
+          <rect x="110" y="6" width="12" height="12" fill="#d4c4c0"/>
+          <rect x="78" y="22" width="12" height="12" fill="#fafbfc"/>
+          <rect x="94" y="22" width="12" height="12" fill="#ed6d67"/>
+          <rect x="110" y="22" width="12" height="12" fill="#d5e1e9"/>
+        </svg>
+      </a>
+      <ul class="footer__contacts">
+        <li><strong>Office:</strong><br />Via Sant'Alberto 1/F, 24020 Parre (BG) — ITALY</li>
+        <li><strong>Email:</strong><br />info@seid.it</li>
+        <li><strong>PEC:</strong><br />administration@pec.seid.it</li>
+        <li><strong>Phone:</strong><br />+39 0355788243</li>
+        <li><strong>Canale social:</strong><br />Linkedin</li>
+      </ul>
+    </div>
+
+    <div class="footer__right">
+      <div class="newsletter">
+        <p class="newsletter__title">Ricevi la nostra newsletter</p>
+        <form class="newsletter__form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="inserisci qui la tua email" aria-label="Email" />
+          <button type="submit" aria-label="Iscriviti">→</button>
+        </form>
+      </div>
+
+      <nav class="footer__nav">
+        <a href="#services">Soluzioni</a>
+        <a href="#contact">Contatti</a>
+        <a href="#services">Service</a>
+        <a href="#projects">Products</a>
+      </nav>
+
+      <div class="footer__socials" aria-label="social">
+        <a href="#" aria-label="LinkedIn"><span>in</span></a>
+        <a href="#" aria-label="Instagram"><span>ig</span></a>
+        <a href="#" aria-label="YouTube"><span>yt</span></a>
+        <a href="#" aria-label="X"><span>x</span></a>
+        <a href="#" aria-label="Facebook"><span>fb</span></a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="footer__claim">
+    <span class="red">Hi,</span> <span class="light">humanistic intelligence</span>
+  </h2>
+
+  <div class="footer__legal">
+    <span>Iscriz. C.C.I.A.A.: BG 241174</span>
+    <span>Iscriz. Trib.: BG 33451 – Vol. 6412</span>
+    <span>VAT ID: IT01838660163</span>
+    <span>SDI: RHCG7W9</span>
+    <span>CODICE ETICO</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
