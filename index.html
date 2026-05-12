@@ -17,31 +17,87 @@
   <span class="edge-accent__inner"></span>
 </div>
 
-<!-- HEADER -->
-<header class="site-header" id="siteHeader">
+<!-- Reusable SVG icon defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow-dr" viewBox="0 0 18 18">
+      <path d="M5 5h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
+      <path d="M5 13L13 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24">
+      <path d="M7 17L17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+      <path d="M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24">
+      <path d="M4 12h15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+      <path d="M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 4v16M4 12h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M4 5h16v11H10l-4 4v-4H4V5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"/>
+    </symbol>
+    <symbol id="i-oil" viewBox="0 0 36 36">
+      <path d="M18 4 C12 14, 8 18, 8 24 a10 10 0 0 0 20 0 c0-6-4-10-10-20z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-lng" viewBox="0 0 36 36">
+      <rect x="8" y="10" width="20" height="20" rx="2" fill="currentColor"/>
+      <path d="M18 4l8 8H10l8-8z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-offshore" viewBox="0 0 36 36">
+      <rect x="14" y="6" width="8" height="20" fill="currentColor"/>
+      <path d="M4 26h28l-4 6H8z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-energy" viewBox="0 0 36 36">
+      <path d="M20 4L8 22h8l-2 10 14-18h-8z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 36 36">
+      <circle cx="18" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M18 10v9h7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 36 36">
+      <circle cx="18" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <ellipse cx="18" cy="18" rx="6" ry="14" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M4 18h28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 36 36">
+      <path d="M18 4L30 9v11c0 6.5-5.5 11.5-12 13C11.5 31.5 6 26.5 6 20V9l12-5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="miter"/>
+      <path d="M12 18l4 4 8-8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- HEADER: dual version (transparent over hero, solid post-scroll) -->
+<header class="site-header" id="siteHeader" data-state="transparent">
   <a href="#" class="logo" aria-label="SEID home">
-    <svg viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
-      <text x="0" y="32" fill="#1a5784" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32" letter-spacing="-1">SEID</text>
+    <!-- Logo with two color variants controlled via CSS -->
+    <svg class="logo-svg" viewBox="0 0 127 42" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <text class="logo-text" x="0" y="32" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32" letter-spacing="-1">SEID</text>
       <rect x="78" y="6" width="12" height="12" fill="#ed6d67"/>
-      <rect x="94" y="6" width="12" height="12" fill="#1a5784"/>
+      <rect x="94" y="6" width="12" height="12" class="logo-sq-a"/>
       <rect x="110" y="6" width="12" height="12" fill="#d4c4c0"/>
-      <rect x="78" y="22" width="12" height="12" fill="#1a5784"/>
+      <rect x="78" y="22" width="12" height="12" class="logo-sq-a"/>
       <rect x="94" y="22" width="12" height="12" fill="#ed6d67"/>
-      <rect x="110" y="22" width="12" height="12" fill="#d5e1e9"/>
+      <rect x="110" y="22" width="12" height="12" class="logo-sq-b"/>
     </svg>
   </a>
 
   <nav class="nav" aria-label="Primary">
     <ul>
-      <li><a href="#about">about us</a></li>
-      <li><a href="#services">solution <span class="caret">↘</span></a></li>
-      <li><a href="#services">service <span class="caret">↘</span></a></li>
-      <li><a href="#projects">products <span class="caret">↘</span></a></li>
-      <li><a href="#projects">case study</a></li>
-      <li><a href="#careers">eventi</a></li>
-      <li><a href="#careers">careers</a></li>
+      <li><a href="#about"><span>about us</span></a></li>
+      <li><a href="#services"><span>solution</span><svg class="ico" width="17" height="18"><use href="#i-arrow-dr"/></svg></a></li>
+      <li><a href="#services"><span>service</span><svg class="ico" width="17" height="18"><use href="#i-arrow-dr"/></svg></a></li>
+      <li><a href="#projects"><span>products</span><svg class="ico" width="17" height="18"><use href="#i-arrow-dr"/></svg></a></li>
+      <li><a href="#projects"><span>case study</span></a></li>
+      <li><a href="#careers"><span>eventi</span></a></li>
+      <li><a href="#careers"><span>careers</span></a></li>
     </ul>
   </nav>
+
+  <a class="header-cta" href="#contact" aria-label="Contattaci">
+    <svg width="20" height="20"><use href="#i-chat"/></svg>
+  </a>
 
   <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -64,7 +120,11 @@
 <main>
 
   <!-- HERO BANNER -->
-  <section class="hero-banner">
+  <section class="hero-banner" id="heroBanner">
+    <video class="hero-banner__video" autoplay muted loop playsinline preload="metadata" poster="">
+      <source src="assets/hero.webm" type="video/webm" />
+    </video>
+    <div class="hero-banner__veil" aria-hidden="true"></div>
     <h1 class="hero-banner__title">
       <span class="hi js-hi">Hi,</span>
       <span class="white js-hi-text">Humanistic intelligence</span>
@@ -92,7 +152,7 @@
       </div>
       <a class="btn btn--primary btn--icon js-fade-up" href="#services">
         <span>servizi</span>
-        <span class="btn__icon" aria-hidden="true">↗</span>
+        <span class="btn__icon" aria-hidden="true"><svg width="16" height="16"><use href="#i-arrow-ur"/></svg></span>
       </a>
     </div>
   </section>
@@ -226,7 +286,7 @@
       <h2 class="section-title js-reveal">I nostri progetti</h2>
       <a class="btn btn--primary btn--icon js-fade-up" href="#projects">
         <span>case study</span>
-        <span class="btn__icon" aria-hidden="true">↗</span>
+        <span class="btn__icon" aria-hidden="true"><svg width="16" height="16"><use href="#i-arrow-ur"/></svg></span>
       </a>
     </div>
 
@@ -235,7 +295,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">Oil &amp; gas</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 V14 L18 6 L30 14 V30 H22 V20 H14 V30 Z" fill="#fff"/></svg>
+            <svg width="42" height="42"><use href="#i-oil"/></svg>
           </div>
         </div>
         <div class="project-card__body">
@@ -249,7 +309,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">LNG</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="20" r="10" fill="#fff"/><path d="M18 4 L24 16 H12 Z" fill="#fff"/></svg>
+            <svg width="42" height="42"><use href="#i-lng"/></svg>
           </div>
         </div>
         <div class="project-card__body">
@@ -263,7 +323,7 @@
         <div class="project-card__top">
           <h3 class="project-card__title">Offshore</h3>
           <div class="project-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 H32 L28 30 H8 Z" fill="#fff"/><rect x="14" y="8" width="8" height="16" fill="#fff"/></svg>
+            <svg width="42" height="42"><use href="#i-offshore"/></svg>
           </div>
         </div>
         <div class="project-card__body">
@@ -290,7 +350,7 @@
           <span class="num">00</span><span class="suf">kw</span>
         </p>
         <div class="data-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M18 4 L8 22 H16 L14 32 L26 14 H18 Z" fill="#fff"/></svg>
+          <svg width="42" height="42"><use href="#i-clock"/></svg>
         </div>
       </div>
       <p class="data-card__copy">Anni di esperienza nell&apos;automazione industriale ad alta criticità.</p>
@@ -302,7 +362,7 @@
           <span class="num">00</span><span class="suf">kw</span>
         </p>
         <div class="data-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="24" height="20" rx="2" fill="#fff"/><rect x="10" y="12" width="16" height="3" fill="#1a5784"/></svg>
+          <svg width="42" height="42"><use href="#i-globe"/></svg>
         </div>
       </div>
       <p class="data-card__copy">Progetti consegnati in oltre 30 paesi nel mondo.</p>
@@ -314,7 +374,7 @@
           <span class="num">00</span><span class="suf">kw</span>
         </p>
         <div class="data-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M18 4 L30 10 V20 C30 26 24 32 18 32 C12 32 6 26 6 20 V10 Z" fill="#fff"/></svg>
+          <svg width="42" height="42"><use href="#i-shield"/></svg>
         </div>
       </div>
       <p class="data-card__copy">Uptime medio dei sistemi installati nei settori critici.</p>
@@ -333,7 +393,7 @@
       <p class="js-fade-up">Se ami la tecnologia ma credi anche nel valore umano dell&apos;ingegneria, SEID è il posto giusto per te.</p>
       <a class="btn btn--ghost btn--icon js-fade-up" href="#contact">
         <span>posizioni aperte</span>
-        <span class="btn__icon" aria-hidden="true">↗</span>
+        <span class="btn__icon" aria-hidden="true"><svg width="16" height="16"><use href="#i-arrow-ur"/></svg></span>
       </a>
     </div>
   </section>
@@ -345,11 +405,11 @@
     <div class="contact-cta__buttons js-fade-up">
       <a class="btn btn--primary btn--icon btn--sm" href="#">
         <span>scrivici</span>
-        <span class="btn__icon" aria-hidden="true">↗</span>
+        <span class="btn__icon" aria-hidden="true"><svg width="16" height="16"><use href="#i-arrow-ur"/></svg></span>
       </a>
       <a class="btn btn--soft btn--icon btn--sm" href="#">
         <span>Parla con noi</span>
-        <span class="btn__icon" aria-hidden="true">↗</span>
+        <span class="btn__icon" aria-hidden="true"><svg width="16" height="16"><use href="#i-arrow-ur"/></svg></span>
       </a>
     </div>
   </section>
@@ -385,7 +445,7 @@
         <p class="newsletter__title">Ricevi la nostra newsletter</p>
         <form class="newsletter__form" onsubmit="event.preventDefault();">
           <input type="email" placeholder="inserisci qui la tua email" aria-label="Email" />
-          <button type="submit" aria-label="Iscriviti">→</button>
+          <button type="submit" aria-label="Iscriviti"><svg width="22" height="22"><use href="#i-arrow-r"/></svg></button>
         </form>
       </div>
 
@@ -395,14 +455,6 @@
         <a href="#services">Service</a>
         <a href="#projects">Products</a>
       </nav>
-
-      <div class="footer__socials" aria-label="social">
-        <a href="#" aria-label="LinkedIn"><span>in</span></a>
-        <a href="#" aria-label="Instagram"><span>ig</span></a>
-        <a href="#" aria-label="YouTube"><span>yt</span></a>
-        <a href="#" aria-label="X"><span>x</span></a>
-        <a href="#" aria-label="Facebook"><span>fb</span></a>
-      </div>
     </div>
   </div>
 

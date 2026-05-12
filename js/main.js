@@ -21,23 +21,26 @@ function splitWords(el) {
   return el.querySelectorAll('.word');
 }
 
-/* ---------- Header scroll state ---------- */
+/* ---------- Header state switcher (transparent over hero, solid after) ---------- */
 const header = document.getElementById('siteHeader');
-ScrollTrigger.create({
-  start: 'top -40',
-  end: 99999,
-  onUpdate(self) {
-    header.classList.toggle('is-scrolled', self.scroll() > 40);
-  }
-});
+const heroBanner = document.getElementById('heroBanner');
+if (header && heroBanner) {
+  ScrollTrigger.create({
+    trigger: heroBanner,
+    start: 'bottom top+=80',
+    end: 'max',
+    onEnter:     () => header.setAttribute('data-state', 'solid'),
+    onLeaveBack: () => header.setAttribute('data-state', 'transparent')
+  });
+}
 
-/* ---------- Right edge accent line grows on scroll ---------- */
+/* ---------- Right edge accent cursor: follows scroll progress ---------- */
 const edgeInner = document.querySelector('.edge-accent__inner');
 if (edgeInner) {
   gsap.to(edgeInner, {
-    height: '100%',
+    top: 'calc(100% - 72px)',
     ease: 'none',
-    scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: true }
+    scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 0.4 }
   });
 }
 
