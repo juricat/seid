@@ -35,7 +35,6 @@
   --font-body: "Inter", system-ui, sans-serif;
 
   --max: 1440px;
-  --header-h: 102px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,6 +47,7 @@ body {
   color: var(--neutral-950);
   line-height: 1.45;
   overflow-x: hidden;
+  padding-right: 6px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -215,7 +215,7 @@ button { font: inherit; cursor: pointer; border: 0; background: transparent; col
   padding: 110px 32px 40px;
   z-index: 45;
   transition: right .45s cubic-bezier(.65,.05,.36,1);
-  border-left: 12px solid var(--accent-500);
+  border-left: 6px solid var(--accent-500);
 }
 .mobile-drawer.is-open { right: 0; }
 .mobile-drawer nav {
@@ -874,7 +874,7 @@ section { position: relative; }
 /* ------- CONTACT CTA ------- */
 .contact-cta {
   background: var(--neutral-100);
-  border-left: 12px solid var(--accent-500);
+  border-left: 6px solid var(--accent-500);
   padding: var(--spacing-6xl) var(--margin);
   display: flex;
   flex-direction: column;
