@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/figma-gsap-animations-8unH2
+      - claude/museum-website-page-xoWFn
   workflow_dispatch:
 
 permissions:
