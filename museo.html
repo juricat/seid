@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Museo del Violino — Cremona</title>
+<meta name="description" content="Il Museo del Violino di Cremona racconta cinque secoli di liuteria, musica e maestria artigianale. Mostre, concerti, visite guidate e collezioni permanenti." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/museo.css?v=1" />
+</head>
+<body class="mv">
+
+<!-- ============== HEADER ============== -->
+<header class="mv-header" id="mvHeader">
+  <a href="#" class="mv-header__brand" aria-label="Museo del Violino, home">
+    <span class="mv-brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="28" height="28">
+        <path d="M16 2c-2.5 0-4 2.4-4 5 0 1.5.5 2.7 1 3.7-1.8.7-3 2.4-3 4.5 0 1.7.7 3.1 1.8 4.1C10 20.4 9 22.5 9 25c0 3 2.2 5 5 5h4c2.8 0 5-2 5-5 0-2.5-1-4.6-2.8-5.7 1.1-1 1.8-2.4 1.8-4.1 0-2.1-1.2-3.8-3-4.5.5-1 1-2.2 1-3.7 0-2.6-1.5-5-4-5z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="13" cy="22" r="1" fill="currentColor"/>
+        <circle cx="19" cy="22" r="1" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="mv-brand-text">
+      <span class="mv-brand-text__top">Museo del</span>
+      <span class="mv-brand-text__bot">Violino</span>
+    </span>
+  </a>
+
+  <nav class="mv-nav" aria-label="Primary">
+    <ul>
+      <li><a href="#visit">Pianifica la visita</a></li>
+      <li><a href="#exhibitions">Mostre &amp; Eventi</a></li>
+      <li><a href="#collection">Collezione</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#support">Sostienici</a></li>
+    </ul>
+  </nav>
+
+  <div class="mv-header__actions">
+    <a class="mv-link" href="#">IT / EN</a>
+    <a class="mv-btn mv-btn--ghost mv-btn--sm" href="#tickets">Biglietti</a>
+  </div>
+
+  <button class="mv-burger" id="mvBurger" aria-label="Apri menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mv-drawer" id="mvDrawer" aria-hidden="true">
+  <nav>
+    <a href="#visit">Pianifica la visita</a>
+    <a href="#exhibitions">Mostre &amp; Eventi</a>
+    <a href="#collection">Collezione</a>
+    <a href="#stories">Stories</a>
+    <a href="#support">Sostienici</a>
+    <a class="mv-btn mv-btn--primary" href="#tickets">Acquista biglietti</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section class="mv-hero">
+  <div class="mv-hero__media" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1800&q=80&auto=format&fit=crop" alt="" loading="eager"/>
+    <div class="mv-hero__overlay"></div>
+  </div>
+
+  <div class="mv-hero__inner">
+    <p class="mv-eyebrow">Mostra in corso · fino al 28 settembre 2026</p>
+    <h1 class="mv-hero__title">
+      <span class="mv-hero__title-1">Stradivari,</span>
+      <span class="mv-hero__title-2">l&rsquo;eredità del suono</span>
+    </h1>
+    <p class="mv-hero__sub">Cinque secoli di liuteria cremonese in un percorso immersivo tra strumenti, suoni e maestri.</p>
+    <div class="mv-hero__cta">
+      <a class="mv-btn mv-btn--primary" href="#tickets">Acquista biglietti</a>
+      <a class="mv-btn mv-btn--outline-light" href="#visit">Pianifica la visita</a>
+    </div>
+  </div>
+
+  <div class="mv-hero__meta">
+    <div class="mv-hero__meta-item"><span>Aperto oggi</span><strong>10:00 — 18:00</strong></div>
+    <div class="mv-hero__meta-item"><span>Piazza Marconi 5</span><strong>Cremona, Italia</strong></div>
+    <div class="mv-hero__meta-item"><span>Concerto della sera</span><strong>20:30 · Auditorium Arvedi</strong></div>
+  </div>
+</section>
+
+<!-- ============== INTRO STRIP ============== -->
+<section class="mv-intro">
+  <div class="mv-intro__line"></div>
+  <h2 class="mv-intro__title">Il violino nasce qui.<br/>A Cremona, nel cuore della liuteria mondiale.</h2>
+  <p class="mv-intro__copy">Dalla bottega di Andrea Amati al genio di Antonio Stradivari, fino ai grandi maestri contemporanei: il Museo del Violino conserva e fa risuonare gli strumenti che hanno cambiato la storia della musica occidentale.</p>
+  <a class="mv-link mv-link--arrow" href="#collection">Esplora la collezione <span aria-hidden="true">→</span></a>
+</section>
+
+<!-- ============== FEATURED EXHIBITION ============== -->
+<section class="mv-featured" id="exhibitions">
+  <div class="mv-section-head">
+    <div>
+      <p class="mv-eyebrow mv-eyebrow--dark">Mostra in evidenza</p>
+      <h2 class="mv-section-title">Il Cannone di Paganini</h2>
+    </div>
+    <a class="mv-btn mv-btn--ghost mv-btn--sm" href="#">Tutte le mostre</a>
+  </div>
+
+  <div class="mv-featured__grid">
+    <div class="mv-featured__copy">
+      <p class="mv-featured__lead">In esposizione straordinaria fino al <strong>15 settembre 2026</strong>.</p>
+      <p>Il leggendario Guarneri del Gesù del 1743, appartenuto a Niccolò Paganini, lascia per la prima volta dopo dieci anni le mura di Genova per essere esposto al Museo del Violino. Un dialogo unico tra due capitali della liuteria italiana.</p>
+      <ul class="mv-featured__facts">
+        <li><span>Liutaio</span><strong>Bartolomeo Giuseppe Guarneri "del Gesù"</strong></li>
+        <li><span>Anno</span><strong>1743</strong></li>
+        <li><span>Provenienza</span><strong>Comune di Genova</strong></li>
+      </ul>
+      <a class="mv-btn mv-btn--primary mv-btn--sm" href="#">Scopri la mostra</a>
+    </div>
+
+    <figure class="mv-featured__media">
+      <img src="https://images.unsplash.com/photo-1519683109079-d5f539e1542f?w=1200&q=80&auto=format&fit=crop" alt="Violino Guarneri del Gesù"/>
+      <figcaption>Foto · Archivio Museo del Violino</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============== UPCOMING EVENTS ============== -->
+<section class="mv-events">
+  <div class="mv-section-head mv-section-head--center">
+    <div>
+      <p class="mv-eyebrow mv-eyebrow--dark">Prossimi eventi</p>
+      <h2 class="mv-section-title">Concerti, conferenze e visite guidate</h2>
+      <p class="mv-section-sub">La voce degli strumenti suonati dal vivo, ogni settimana, nell&rsquo;Auditorium Arvedi.</p>
+    </div>
+    <div class="mv-section-head__nav">
+      <button class="mv-arrow" aria-label="Precedente">‹</button>
+      <button class="mv-arrow mv-arrow--filled" aria-label="Successivo">›</button>
+    </div>
+  </div>
+
+  <div class="mv-events__grid">
+
+    <article class="mv-event-card">
+      <div class="mv-event-card__media">
+        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=900&q=80&auto=format&fit=crop" alt=""/>
+        <span class="mv-tag mv-tag--free">Concerto · €15</span>
+      </div>
+      <div class="mv-event-card__body">
+        <p class="mv-event-card__date"><strong>16 mag</strong> · Auditorium Arvedi</p>
+        <h3>Le Quattro Stagioni — Stradivari 1715</h3>
+        <p class="mv-event-card__copy">L&rsquo;ensemble del Museo esegue Vivaldi sul violino "Vesuvio" appartenuto alla collezione Hammerle.</p>
+        <a class="mv-event-card__cta" href="#">Prenota →</a>
+      </div>
+    </article>
+
+    <article class="mv-event-card">
+      <div class="mv-event-card__media">
+        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=900&q=80&auto=format&fit=crop" alt=""/>
+        <span class="mv-tag">Visita guidata</span>
+      </div>
+      <div class="mv-event-card__body">
+        <p class="mv-event-card__date"><strong>20 mag</strong> · Sala Stradivari</p>
+        <h3>Dietro le quinte della liuteria</h3>
+        <p class="mv-event-card__copy">Visita esclusiva con il restauratore del Museo: tecniche, vernici e segreti delle botteghe cremonesi.</p>
+        <a class="mv-event-card__cta" href="#">Prenota →</a>
+      </div>
+    </article>
+
+    <article class="mv-event-card">
+      <div class="mv-event-card__media">
+        <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?w=900&q=80&auto=format&fit=crop" alt=""/>
+        <span class="mv-tag mv-tag--accent">Conferenza</span>
+      </div>
+      <div class="mv-event-card__body">
+        <p class="mv-event-card__date"><strong>25 mag</strong> · Sala Conferenze</p>
+        <h3>Acustica e materia: la scienza dietro il suono</h3>
+        <p class="mv-event-card__copy">Con Marco Malagodi, direttore del Laboratorio Arvedi di Diagnostica Non Invasiva.</p>
+        <a class="mv-event-card__cta" href="#">Prenota →</a>
+      </div>
+    </article>
+
+    <article class="mv-event-card">
+      <div class="mv-event-card__media">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=80&auto=format&fit=crop" alt=""/>
+        <span class="mv-tag mv-tag--free">Per le scuole · Gratuito</span>
+      </div>
+      <div class="mv-event-card__body">
+        <p class="mv-event-card__date"><strong>28 mag</strong> · Aula didattica</p>
+        <h3>Il violino raccontato ai bambini</h3>
+        <p class="mv-event-card__copy">Laboratorio interattivo per le scuole primarie: costruiamo insieme un piccolo strumento a corda.</p>
+        <a class="mv-event-card__cta" href="#">Prenota →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== ANNOUNCEMENT BANNER ============== -->
+<section class="mv-banner">
+  <div class="mv-banner__inner">
+    <h3>Hai chiesto. Abbiamo ascoltato.<br/>Niente più costi di prenotazione.</h3>
+    <p>Per tutti i biglietti acquistati direttamente dal sito del Museo del Violino, dal 1° giugno 2026, non saranno applicati costi di prevendita. Il prezzo che vedi è il prezzo che paghi.</p>
+  </div>
+</section>
+
+<!-- ============== PLAN YOUR VISIT ============== -->
+<section class="mv-visit" id="visit">
+  <div class="mv-visit__head">
+    <h2 class="mv-section-title mv-section-title--light">Pianifica la tua visita</h2>
+    <p class="mv-section-sub mv-section-sub--light">Tutto ciò che serve per vivere il Museo del Violino al meglio.</p>
+  </div>
+
+  <div class="mv-visit__grid">
+    <a class="mv-visit-card" href="#tickets">
+      <div class="mv-visit-card__img" style="background-image:url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=900&q=80&auto=format&fit=crop')"></div>
+      <div class="mv-visit-card__body">
+        <h3>Biglietti</h3>
+        <p>Tariffe, riduzioni e ingresso combinato Museo + Auditorium.</p>
+        <span class="mv-visit-card__arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+
+    <a class="mv-visit-card" href="#">
+      <div class="mv-visit-card__img" style="background-image:url('https://images.unsplash.com/photo-1568667256549-094345857637?w=900&q=80&auto=format&fit=crop')"></div>
+      <div class="mv-visit-card__body">
+        <h3>Audioguide &amp; tour</h3>
+        <p>Percorsi tematici in 6 lingue, tour guidati e visite per famiglie.</p>
+        <span class="mv-visit-card__arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+
+    <a class="mv-visit-card" href="#">
+      <div class="mv-visit-card__img" style="background-image:url('https://images.unsplash.com/photo-1481026469463-66327c86e544?w=900&q=80&auto=format&fit=crop')"></div>
+      <div class="mv-visit-card__body">
+        <h3>Friends of MdV</h3>
+        <p>Diventa membro: ingressi illimitati, eventi riservati e visite ai laboratori.</p>
+        <span class="mv-visit-card__arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============== COLLECTION SHOWCASE ============== -->
+<section class="mv-collection" id="collection">
+  <div class="mv-collection__bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1462965326201-d02e4f455804?w=2000&q=80&auto=format&fit=crop" alt=""/>
+  </div>
+
+  <div class="mv-collection__inner">
+    <span class="mv-collection__index">02</span>
+    <ul class="mv-collection__list">
+      <li class="is-active"><a href="#">Sala dei Tesori</a></li>
+      <li><a href="#">Andrea Amati</a></li>
+      <li><a href="#">Antonio Stradivari</a></li>
+      <li><a href="#">Guarneri del Gesù</a></li>
+      <li><a href="#">Liuteria contemporanea</a></li>
+    </ul>
+    <a class="mv-btn mv-btn--outline-light mv-btn--sm" href="#">Esplora la collezione →</a>
+  </div>
+</section>
+
+<!-- ============== STORIES ============== -->
+<section class="mv-stories" id="stories">
+  <div class="mv-section-head">
+    <div>
+      <p class="mv-eyebrow mv-eyebrow--dark">Storie dal Museo</p>
+      <h2 class="mv-section-title">Voci, restauri e scoperte</h2>
+    </div>
+    <a class="mv-link mv-link--arrow" href="#">Tutte le storie <span>→</span></a>
+  </div>
+
+  <div class="mv-stories__main">
+    <figure class="mv-stories__media">
+      <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=1400&q=80&auto=format&fit=crop" alt="Restauro di un violino storico"/>
+    </figure>
+    <div class="mv-stories__body">
+      <h3>"Suonare uno Stradivari è un dialogo con il tempo"</h3>
+      <p>Intervista esclusiva al Maestro Salvatore Accardo, ospite del Museo per la stagione 2026. Un racconto sul timbro, sulla responsabilità di custodire uno strumento di trecento anni e sull&rsquo;emozione di farlo cantare ancora.</p>
+      <a class="mv-btn mv-btn--ghost mv-btn--sm" href="#">Leggi l&rsquo;intervista</a>
+    </div>
+  </div>
+
+  <div class="mv-stories__grid">
+    <article class="mv-story">
+      <div class="mv-story__img" style="background-image:url('https://images.unsplash.com/photo-1519677584237-752f8853252e?w=800&q=80&auto=format&fit=crop')"></div>
+      <h4>Il restauro dell&rsquo;Amati 1566</h4>
+      <p class="mv-story__date">02 maggio 2026</p>
+    </article>
+    <article class="mv-story">
+      <div class="mv-story__img" style="background-image:url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80&auto=format&fit=crop')"></div>
+      <h4>Sotto i raggi X: l&rsquo;anatomia del Vesuvio</h4>
+      <p class="mv-story__date">22 aprile 2026</p>
+    </article>
+    <article class="mv-story">
+      <div class="mv-story__img" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80&auto=format&fit=crop')"></div>
+      <h4>Tre giovani liutai vincono il concorso 2026</h4>
+      <p class="mv-story__date">10 aprile 2026</p>
+    </article>
+    <article class="mv-story">
+      <div class="mv-story__img" style="background-image:url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=800&q=80&auto=format&fit=crop')"></div>
+      <h4>Dagli archivi: una lettera di Stradivari</h4>
+      <p class="mv-story__date">28 marzo 2026</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============== SUPPORT ============== -->
+<section class="mv-support" id="support">
+  <div class="mv-support__bg" aria-hidden="true"></div>
+  <div class="mv-support__panel">
+    <h2>Sostieni il Museo</h2>
+    <p>Il tuo contributo aiuta a conservare gli strumenti, sostenere la ricerca e portare la musica nelle scuole.</p>
+    <div class="mv-support__amounts">
+      <button class="mv-amount">€25</button>
+      <button class="mv-amount">€50</button>
+      <button class="mv-amount mv-amount--active">€100</button>
+      <button class="mv-amount">€250</button>
+      <button class="mv-amount">€500</button>
+    </div>
+    <a class="mv-link mv-link--ondark" href="#">Inserisci un altro importo</a>
+    <a class="mv-btn mv-btn--primary" href="#">Fai una donazione</a>
+  </div>
+</section>
+
+<!-- ============== NEWSLETTER ============== -->
+<section class="mv-newsletter">
+  <div class="mv-newsletter__copy">
+    <h2>Resta in contatto.<br/>Ricevi i programmi della stagione.</h2>
+    <p>Iscriviti alla newsletter mensile per anticipazioni, dietro le quinte e accesso prioritario ai concerti.</p>
+  </div>
+  <form class="mv-newsletter__form" onsubmit="event.preventDefault();">
+    <label>Nome
+      <input type="text" placeholder="Il tuo nome"/>
+    </label>
+    <label>Cognome
+      <input type="text" placeholder="Il tuo cognome"/>
+    </label>
+    <label>Email
+      <input type="email" placeholder="nome@esempio.it"/>
+    </label>
+    <button class="mv-btn mv-btn--primary" type="submit">Iscriviti</button>
+  </form>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="mv-footer">
+  <div class="mv-footer__top">
+    <div class="mv-footer__brand">
+      <span class="mv-brand-mark mv-brand-mark--lg" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="36" height="36">
+          <path d="M16 2c-2.5 0-4 2.4-4 5 0 1.5.5 2.7 1 3.7-1.8.7-3 2.4-3 4.5 0 1.7.7 3.1 1.8 4.1C10 20.4 9 22.5 9 25c0 3 2.2 5 5 5h4c2.8 0 5-2 5-5 0-2.5-1-4.6-2.8-5.7 1.1-1 1.8-2.4 1.8-4.1 0-2.1-1.2-3.8-3-4.5.5-1 1-2.2 1-3.7 0-2.6-1.5-5-4-5z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </span>
+      <p class="mv-footer__name">Museo del Violino<br/><small>Cremona, Italia</small></p>
+    </div>
+
+    <div class="mv-footer__cols">
+      <div>
+        <h5>Visita</h5>
+        <a href="#tickets">Biglietti</a>
+        <a href="#">Orari &amp; tariffe</a>
+        <a href="#">Mappa &amp; come arrivare</a>
+        <a href="#">Accessibilità</a>
+      </div>
+      <div>
+        <h5>Programma</h5>
+        <a href="#exhibitions">Mostre</a>
+        <a href="#">Concerti</a>
+        <a href="#">Conferenze</a>
+        <a href="#">Per le scuole</a>
+      </div>
+      <div>
+        <h5>Museo</h5>
+        <a href="#">Chi siamo</a>
+        <a href="#">Friends of MdV</a>
+        <a href="#">Lavora con noi</a>
+        <a href="#">Press</a>
+      </div>
+      <div>
+        <h5>Contatti</h5>
+        <p>Piazza Marconi 5<br/>26100 Cremona, Italia</p>
+        <p>+39 0372 080 809<br/>info@museodelviolino.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mv-footer__bottom">
+    <p>© 2026 Fondazione Museo del Violino · Antonio Stradivari · Cremona</p>
+    <div class="mv-footer__legal">
+      <a href="#">Privacy</a>
+      <a href="#">Cookie</a>
+      <a href="#">Termini &amp; condizioni</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/museo.js?v=1"></script>
+</body>
+</html>
